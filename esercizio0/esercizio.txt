@@ -1,0 +1,9 @@
+Crea una pagina html nella quale chiedi all'utente il suo anno di nascita.
+Stampa la sua età nella pagina ("Caro utente hai 25 anni");
+
+Se l'età è inferiore o uguale a 23 la scritta sarà di colore blu e verrà aggiunto il seguente testo "sei nato  negli anni 2000"
+
+Se l'età è superiore a 23 la scritta sarà di colore verde e verrà aggiunto il seguente testo "sei nato negli anni 90"
+
+
+
