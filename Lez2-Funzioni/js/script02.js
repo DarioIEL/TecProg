@@ -50,11 +50,11 @@ function calcolaVolume(altezza, larghezza, profondita){
 }
 
 
-///////////OPPPURE///////////
+// ///////////OPPPURE///////////
 
-// function calcolaVolume2(calcolaArea, profondita){
+// function calcolaVolume2(area, profondita){
 
-//     let volume = calcolaArea* profondita;
+//     let volume = area* profondita;
 
 //     return volume;
 
