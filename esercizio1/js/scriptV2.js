@@ -1,4 +1,4 @@
-function estrai(){
+function estrai(ruota){
     
         let numeriDaEstrarre = document.getElementById("numeriDaEstrarre").value;
         
@@ -20,9 +20,13 @@ function estrai(){
         }
        
     }
-
-    demo.innerHTML += creaSerie(numeriEstratti);        
-    
+   
+    if(ruota){
+        demo.innerHTML += ruota + " " +  creaSerie(numeriEstratti)
+    }else{    
+        demo.innerHTML += creaSerie(numeriEstratti);        
+    }
+        
     console.log(numGiri);
     console.log(numeriEstratti);
   
@@ -34,6 +38,7 @@ function estrai(){
 
 
 function creaSerie(numEstratti){
+    
     let serie = "<p>";
 
     numEstratti.forEach(num => {
@@ -59,13 +64,33 @@ function stampa(){
 btn.addEventListener("click", stampa);
 
 
-
-
-
-
-
-
-
 // let colori = ["bianco", "verde", "giallo"];
 // console.log(colori.indexOf("giallo")); //2
 // console.log(colori.indexOf("42")); //-1
+
+function estraiTutteLeRuote(){
+    demo.innerHTML = "";
+
+    let nomiRuote = [
+        "Bari",
+        "Cagliari",
+        "Firenze",
+        "Genova",
+        "Milano",
+        "Napoli",
+        "Palermo",
+        "Roma",
+        "Torino",
+        "Venezia",
+        "Nazionale"
+    ];
+
+
+    for(let i = 0; i < nomiRuote.length; i++){
+        estrai(nomiRuote[i]);
+    }  
+
+}
+
+let btnTutteRuote = document.getElementById("btnTutteRuote");
+btnTutteRuote.addEventListener("click", estraiTutteLeRuote);
