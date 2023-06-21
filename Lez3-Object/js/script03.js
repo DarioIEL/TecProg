@@ -10,7 +10,7 @@ let studente = {
     //dichiaro un metodo
     superaEsame: function(){
         // console.log('hai superato l\'esame');
-         return "Hai superato l'esame!!"
+         return "Hai superato l'esame!!";
     },
 
     //forma "compatta"
@@ -60,5 +60,3 @@ function assegnaCorso(){
 BTN.addEventListener("click", assegnaCorso);
 
 stampaInfo();
-    
-

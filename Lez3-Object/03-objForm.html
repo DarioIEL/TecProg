@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h1>Inserisci un nuovo studente</h1>
+    
+    <form action="">
+
+        <label for="nomeStud">Nome: </label>
+        <input type="text" id="nomeStud">
+        <br>
+        <label for="cognomeStud">Cognome: </label>
+        <input type="text" id="cognomeStud">
+        <br>
+        <label for="matricolaStud">Matricola:</label>
+        <input type="number" id="matricolaStud">
+        <br>
+        
+        <select  id="corso">
+            <option value="-1" selected disabled>Seleziona un corso</option>
+            <option value="tecProg">Tecniche di Programmazione</option>
+            <option value="java">JAVA</option>
+            <option value="angular">Angular</option>
+            <option value="ingSoft">Ingegneria del software</option>
+        </select>
+        <br>
+
+        <button type="button" id="btn">Registra Studente</button>
+    </form>
+
+    <div id="demo"></div>
+
+    <script src="./js/script05.js"></script>
+</body>
+</html>

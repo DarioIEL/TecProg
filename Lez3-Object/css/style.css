@@ -1,0 +1,8 @@
+.dimDiv{
+    height: 80px;
+    width: 200px;
+    border: 1px solid red;
+    padding: 20px;
+    margin: 10px;
+    float: left;
+}
