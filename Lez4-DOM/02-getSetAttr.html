@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    
+    <h1>Biblioteca e Cineteca</h1>
+
+    <h4>Film</h4>
+    <ul id="listaFilm">
+        <li>Arancia Meccanica</li>
+        <li>Paura e Delirio a Las Vegas</li>
+        <li>Io sono leggenda</li>
+        <li>Guida Galattica</li>
+        <li>Terminator</li>
+    </ul>
+
+    <h4>Libri</h4>
+    <ul id="listaLibri">
+        <li>Rumore Bianco</li>
+        <li>Lo zen e il tiro con l'arco</li>
+        <li>Siddartha</li>
+        <li>Il signore degli anelli </li>
+    </ul>
+
+    <script>
+        //i film vanno in blue, i libri in rosso 
+        let libri = document.querySelectorAll("#listaLibri li"); //nodelist, tipo un array
+        
+        // for(let i = 0; i < libri.length; i++){
+        //     libri[i].setAttribute("class", "txtRed");
+        // }
+
+        [...libri].forEach(libro => {
+            libro.setAttribute("class", "txtRed");
+        })
+
+
+        let films = document.querySelector("#listaFilm").children; //collection
+        console.log(films); 
+
+        // for(let i = 0; i < films.length; i++){
+        //     films[i].setAttribute("class", "txtBlue");
+        // }
+
+        //... trasforma qualcosa in un array
+        [...films].forEach(film =>{
+            film.setAttribute("class", "txtBlue");
+        });
+
+
+        
+
+
+
+
+    </script>
+</body>
+</html>

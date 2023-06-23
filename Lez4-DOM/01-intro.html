@@ -8,5 +8,63 @@
 </head>
 <body>
     
+    <h1>Query Selector</h1>
+
+    <h4>Lista</h4>
+    <ul id="listaSpesa">
+        <li id="uno" class="txtRed">Pane</li>
+        <li id="due" class="txtRed">Acqua</li>
+        <li id="tre" class="txtRed">Vino</li>
+        <li id="quattro" class="txtRed">Nutella</li>
+        <li id="cinque" class="txtRed">Pasta</li>
+    </ul>
+
+    <h4>Lista Ecommerce</h4>
+    <ul id="listaEcommerce">
+        <li id="uno" class="txtRed">Mouse</li>
+        <li id="due" class="txtRed">Tastiera</li>
+        <li id="tre" class="txtRed">Pad</li>
+        <li id="quattro" class="txtRed">Grappa</li>
+    </ul>
+
+    <script>
+
+        //querySelector("cssSelector") -> restituisce 1 solo elemento
+        let uno = document.querySelector("#uno");
+        console.log(uno);
+
+        //anche passando una classe mi restituisce il primo, la prima occorrenza
+        // let el = document.querySelector(".txtRed"); //poco usato
+        
+        let listaSpesa = document.querySelector("#listaSpesa");
+        console.log(listaSpesa);
+
+        //voglio prendere tutti gli li 
+        //querySelectoAll restituisce una NodeList
+        let lis = document.querySelectorAll("#listaSpesa li.txtRed");
+        console.log(lis);
+
+        //voglio tutti gli li della listaEcommerce
+        let lisEc = document.querySelectorAll("#listaEcommerce li.txtRed");
+        console.log(lisEc);
+
+
+        //voglio recuperare tutti gli li della lista della spesa
+        let listaSpesaAlt = document.querySelector("#listaSpesa");
+        let liListaSpesaAlt = listaSpesaAlt.children;
+
+        let primoFiglioEc = document.querySelector("#listaEcommerce").firstElementChild.firstChild;
+        console.log(primoFiglioEc);
+
+        let listaEcommerce2 = document.querySelector("#listaEcommerce").children; //nodelist
+        let ultimoFiglio =  listaEcommerce2[listaEcommerce2.length -1];
+        let primoFiglio = listaEcommerce2[0];
+        console.log(ultimoFiglio);
+        console.log(primoFiglio);
+        
+
+    </script>
+
+
 </body>
 </html>
