@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    
+    <h1>Lista Pokemon</h1>
+
+    <input type="text" placeholder="inserisci il tuo pokemon" id="nomePoke"> 
+    <button id="btn">Aggiungi</button>
+
+    <ul id="listaPoke">
+
+        <li>Pikachu</li>
+        <li>Bulbasaur</li>
+        <li>Charmender</li>
+        <li>Magikarp</li>
+        
+    </ul>
+
+
+
+    <script>
+    //1. creare l'elemento li
+    //2. fornire un testo
+    //3. agganciare l'elemento alla lista ul
+
+    let elPokemon = document.createElement("li"); //li
+    let pokemon = document.createTextNode("Mewtwo"); //testo
+
+    elPokemon.appendChild(pokemon); //<li>Mewtwo</li>
+
+    let listaPoke = document.querySelector("#listaPoke");
+
+    listaPoke.appendChild(elPokemon);
+
+
+    let elPokemon2 = document.createElement("li");
+    elPokemon2.textContent = "Squirtle";
+    listaPoke.appendChild(elPokemon2);
+    
+
+    let btn = document.querySelector("#btn");
+
+    function aggiungi(){
+        let nomePoke = document.querySelector("#nomePoke").value;
+        let liPoke = document.createElement("li");
+        liPoke.textContent = nomePoke;
+
+        //creo pulsante per eliminare
+        let pulsanteElimina = document.createElement("button");
+        pulsanteElimina.textContent = " X ";
+
+        pulsanteElimina.addEventListener("click", function(){
+            listaPoke.removeChild(liPoke);
+        });
+
+
+        liPoke.addEventListener("click", function(){
+            if(this.hasAttribute("class")){
+                this.removeAttribute("class");
+            }else{
+                this.setAttribute("class", "txtRed");
+            }
+
+        })
+
+        liPoke.appendChild(pulsanteElimina);        
+        listaPoke.appendChild(liPoke);
+    }
+    
+    btn.addEventListener("click", aggiungi);
+
+
+
+    </script>
+</body>
+</html>

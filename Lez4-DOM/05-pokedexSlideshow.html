@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slideshow</title>
+</head>
+<body>
+    
+    <div id="singoloPokemon">
+        <h2 id="nomePokemon" ></h2>
+        <img id="imgPokemon" src="" alt="">
+        <p id="descrizionePokemon"></p>
+    </div>
+
+    <button id="btnInd">Indietro</button>
+    <button id="btnAva">Avanti</button>
+
+
+    <script>
+        let pokemons=[
+        {
+            nome: "Pikachu",
+            img: "./img/pikachu.jpg",
+            descrizione: "Il primo pokemon trovato sotto un ponte"
+        },
+        {
+            nome: "Charmender",
+            img: "./img/charmender.jpg",
+            descrizione: "Occhio che ti bruci"
+        },
+        {
+            nome: "Bulbasaur",
+            img: "./img/bulbasaur.jpg",
+            descrizione: "La prossima volta porto una pianta"
+        },
+        {
+            nome: "Gengar",
+            img: "./img/gengar.jpg",
+            descrizione: "UHHHHHHHH che paura !!!"
+        }
+    ];
+
+    let nomePokemon = document.querySelector("#nomePokemon");
+    let imgPokemon = document.querySelector("#imgPokemon");
+    let descrizionePokemon = document.querySelector("#descrizionePokemon");
+    let btnAva = document.querySelector("#btnAva");
+    let btnInd = document.querySelector("#btnInd");
+
+    let posizione = 0;
+    
+    function mostra(i){
+        nomePokemon.textContent = pokemons[i].nome;
+        imgPokemon.setAttribute("src", pokemons[i].img);
+        descrizionePokemon.textContent = pokemons[i].descrizione;
+
+    }
+
+    mostra(posizione);
+
+
+    btnAva.addEventListener("click", function(){
+        posizione++;
+        
+        // if(posizione == 4){
+        if(posizione == pokemons.length){
+            posizione = 0;
+        }
+        mostra(posizione);
+
+    })
+
+
+    btnInd.addEventListener("click", function(){
+        posizione--;
+
+        if(posizione == -1){
+            // posizione = 3;
+            posizione = pokemons.length - 1;
+        }
+        mostra(posizione);
+    })
+
+    </script>
+
+
+</body>
+</html>

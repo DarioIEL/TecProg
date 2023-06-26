@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokemon</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    
+    <h1>Pokedex</h1>
+
+    <div id="pokedex">
+        <div id="card1" class="dimCard">
+            <!-- <h5>Bulbasaur</h5>
+            <img src="./img/bulbasaur.jpg" class="dimImg" alt=""> -->
+        </div>
+        <div id="card2" class="dimCard"></div>
+        <div id="card3" class="dimCard"></div>
+        <div id="card4" class="dimCard"></div>
+    </div>
+
+<!-- senza toccare lo html inserisci un'immagine del pokem e un titolo col suo nome -->
+
+<script>
+
+    let pokemons = ["bulbasaur", "pikachu", "gengar", "charmender"];
+
+    for(let i = 0; i < pokemons.length; i++){
+        
+        let nomePokemon = pokemons[i][0].toUpperCase() +  pokemons[i].substring(1);
+        let h5 = document.createElement("h5");
+        h5.textContent = nomePokemon;
+        h5.appendChild;
+        
+        let posizione = i+1;
+        let card = document.querySelector("#card"+posizione ); //parent
+        card.appendChild(h5);
+        
+        let imgPokemon = "./img/"+nomePokemon+".jpg";
+        let img = document.createElement("img");
+        img.setAttribute("src", imgPokemon);
+        img.setAttribute("class", "dimImg");
+        
+        card.appendChild(img);
+    }
+
+
+
+
+</script>
+
+</body>
+</html>
