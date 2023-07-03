@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+
+    <button id="btnSomma">Somma</button>
+
+    <button id="btnSaluta">Saluta</button>
+
+
+
+    <script>
+        let btnSomma = document.querySelector("#btnSomma");
+
+
+        function sommaDueNumeri(a, b){
+            let somma = Number(a) + Number(b);
+            return somma;    
+        }
+
+
+        btnSomma.addEventListener("click", function(){
+             let risultato = sommaDueNumeri(3,2);
+            //posso fare quello che mi pare
+            console.log(  risultato );
+        });
+
+
+        let btnSaluta = document.querySelector("#btnSaluta");
+
+        function saluta(){
+            console.log("Ciao Studente");
+        }
+
+        btnSaluta.addEventListener("click", saluta);
+
+
+        // btnSaluta.onclick = saluta;
+
+    </script>
+    
+</body>
+</html>
