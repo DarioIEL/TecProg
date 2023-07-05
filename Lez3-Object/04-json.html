@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+
+
+    <script>
+        let persona = {
+            nome: "Pippo",
+            cognome: "Rossi",
+            eta: 30
+        }
+
+        console.log(persona);
+        //COSTRUTTORE
+        function Studente(nome, cognome, matricola){
+            this.nome = nome;
+            this.cognome = cognome;
+            this.matricola = matricola;
+        }
+
+        let studente = new Studente("Anna", "Bianchi", 1);
+
+
+        //let personaJSON = "{'nome': 'Gennaro', 'cognome': 'Verdi', 'eta': '25'}";
+
+        //Trasformo la persona della riga 15 in un obj JSON
+        //obj -> json
+        let personaJSON = JSON.stringify(persona);
+        console.log(personaJSON);
+        console.log(typeof personaJSON);
+
+        let studenteJSON = JSON.stringify(studente);
+        console.log(studenteJSON);
+
+
+        //trasformo da JSON a OBJ
+        let docenteJSON = '{"nome": "Gennaro", "cognome": "Verdi", "eta": "25", "materia": "NodeJS"}';
+
+        console.log(docenteJSON);
+
+        let docente = JSON.parse(docenteJSON);
+        console.log(docente);
+        console.log(docente.cognome);
+
+
+        //mappare l'oggetto trasformato con un oggetto JS
+
+        function NuovoDocente(nome, cognome, eta, materia){
+            this.nome = nome;
+            this.cognome = cognome;
+            this.eta = eta;
+            this.materia = materia;
+        }
+
+        let mioNuovoDocente = new NuovoDocente(docente.nome, docente.cognome, docente.eta, docente.materia);
+
+        console.log(mioNuovoDocente.nome, mioNuovoDocente.materia);
+
+
+
+
+    </script>
+</body>
+</html>
