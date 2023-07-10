@@ -1,0 +1,12 @@
+{
+    "users": [
+        {
+            "id":1,
+            "nome": "Pippo",
+            "cognome": "Rossi",
+            "email": "pippo.rossi@gmail.com",
+            "codFis": "pippo876jkcb3rc",
+            "role": "Admin"
+        }
+    ]
+}

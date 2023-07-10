@@ -1,0 +1,50 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    },
+    {
+      "id": 2,
+      "title": "La mia prima volta con json-server",
+      "author": "Angel"
+    },
+    {
+      "id": 3,
+      "title": "Quante cose al mondo puoi fare con Json-server",
+      "author": "Alberto"
+    },
+    {
+      "id": 4,
+      "title": "Vabbè, facciamo prima PAUSA !!!",
+      "author": "Dario"
+    },
+    {
+      "title": "Come mai i due punti ? ",
+      "author": "Rebecca",
+      "id": 5
+    },
+    {
+      "title": "Ma la console dove la prendo ? ",
+      "author": "Matteo",
+      "id": 6
+    },
+    {
+      "title": "mi mancava la rotellina",
+      "author": "Matteo",
+      "id": 7
+    }
+
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}
