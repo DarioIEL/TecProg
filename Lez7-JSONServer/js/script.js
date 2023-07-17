@@ -9,7 +9,7 @@ fetch(URL)
     console.log(response);
 
     response.forEach(post => {
-        demo.innerHTML += "<li> " + post.title + " " + post.author + "</li>";
+        demo.innerHTML += "<li> " + post.title + " " + post.author + " </li>";
     });
 
 });

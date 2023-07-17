@@ -1,12 +1,36 @@
 {
-    "users": [
-        {
-            "id":1,
-            "nome": "Pippo",
-            "cognome": "Rossi",
-            "email": "pippo.rossi@gmail.com",
-            "codFis": "pippo876jkcb3rc",
-            "role": "Admin"
-        }
-    ]
+  "users": [
+    {
+      "nome": "Gennaro",
+      "cognome": "Esposito",
+      "email": "gen.esp@mail.com",
+      "codFis": "genEsp454ccfdsa fsd",
+      "ruolo": "Base",
+      "id": 1
+    },
+    {
+      "nome": "Dario",
+      "cognome": "Mennillo",
+      "email": "dario.mennillo@mail.com",
+      "codFis": "mdnonda93oijc okjsad ",
+      "ruolo": "Ospite",
+      "id": 2
+    },
+    {
+      "nome": "Pippo",
+      "cognome": "rossi",
+      "email": "pippo.rossi@mail.com",
+      "codFis": "mdnonda93oijc okjsad ",
+      "ruolo": "Base",
+      "id": 3
+    },
+    {
+      "nome": "Dario",
+      "cognome": "Mennillo",
+      "email": "dario.mennillo@mail.com",
+      "codFis": "mbvdre76w23f765",
+      "ruolo": "Ospite",
+      "id": 4
+    }
+  ]
 }
