@@ -1,0 +1,29 @@
+<h1 class="txtRed">
+  {{title}}
+</h1>
+
+<button class="btn btn-primary" (click)="mostraAutore()"> Mostra Autore</button>
+
+<div *ngIf="autore else noAutore">
+  <p>Autore dell'app: {{autore}}</p>
+</div>
+
+<ng-template #noAutore>
+  <p> Non hai definito un autore </p>
+</ng-template>
+
+
+<!-- Per far vedere appListaCorsi devo utilizzare il suo selettore -->
+<div class="container">
+  <div class="row">
+
+    <div class="col-6">
+      <app-lista-corsi></app-lista-corsi>
+    </div>
+    
+    <div class="col-6">
+      <app-lista-studenti></app-lista-studenti>
+    </div>
+
+  </div>
+</div>

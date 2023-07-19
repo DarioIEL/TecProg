@@ -1,1 +1,9 @@
-<p>docenti works!</p>
+
+
+
+<div *ngFor="let docente of listaDocenti">
+    <!-- Sto passando in Input una propr definita "docente" in docente.component.ts -->
+    <!-- [nomeDellaPropMarcataInputNelCHILD] = variabile -->
+    <!-- [docente] è una Custom Property -->
+    <app-docente [docente] = docente ></app-docente>
+</div>

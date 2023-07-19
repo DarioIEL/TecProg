@@ -1,1 +1,8 @@
-<p>docente works!</p>
+<div [ngClass]="{online: docente.status == 'online', offline: docente.status == 'offline'}" class="dimDivDoc">
+    <p>{{docente.nome}} {{docente.cognome}} </p>
+    <p>Corso Attuale: {{docente.corso}} </p>
+    <p> Status: {{docente.status}} </p>
+    <p>Numero Corsi: {{docente.numCorsi}} </p>
+
+    <button (click)="onModStatus()">Modifica Status</button>
+</div>
