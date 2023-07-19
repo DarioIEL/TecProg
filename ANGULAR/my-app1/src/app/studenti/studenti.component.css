@@ -1,0 +1,11 @@
+.dimDiv {
+    border: 2px dotted red;
+    margin: 20%;
+}
+
+.txtRed{
+    color: red;
+}
+.txtBlue{
+    color: blue;
+}

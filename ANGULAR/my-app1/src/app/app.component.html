@@ -1,0 +1,17 @@
+<!-- Richiamo la prop title nelle {{}} -> PROPERTY BINDING -->
+<h1>{{title}}</h1>
+
+<p>Autore: {{autore}} {{cognome}}. Età: {{eta}} </p>
+
+<p>Materie Insegnate: </p>
+<ul>
+  <!-- *ngFor="" direttiva Built in da inserire sul tag che vogliamo ciclare. L'* ci segnale che è una direttiva DOM-->
+  <li *ngFor="let materia of materieInsegnate; index as i">
+    {{i + 1}} -  {{materia}}
+  </li> 
+</ul>
+
+
+
+  <!-- Per poter renderizzare un component uso il suo selector -->
+  <app-studenti></app-studenti>

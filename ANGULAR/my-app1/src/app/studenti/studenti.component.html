@@ -1,0 +1,14 @@
+<div class="dimDiv">
+
+    <h2>Lista Studenti Corso Programmatore</h2>
+    <ul>
+        <li [ngClass]="{'txtRed': !studente.materia, 'txtBlue': studente.materia}" *ngFor="let studente of listaStudenti">
+            {{studente.nome}} {{studente.cognome}} <span *ngIf="studente.materia; else noMateria"> - Materia: {{studente.materia}} </span>
+        </li>
+    </ul>
+    
+    <!-- #noMateria si chiama LOCAL REFERENCE -->
+    <ng-template #noMateria>
+        Non ci sono materie assegnate
+    </ng-template>
+</div>
