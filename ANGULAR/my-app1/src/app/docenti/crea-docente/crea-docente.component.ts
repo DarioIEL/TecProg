@@ -8,5 +8,16 @@ import { Docente } from 'src/app/models/docente.model';
 })
 export class CreaDocenteComponent {
 
+  @Output() onDocente = new EventEmitter<Docente>()
   
+ 
+  onCreaDocente(){
+  
+    let mioNuovoDocente = new Docente("Anna", "Bianchi", "online", 1, "Webmarketing");
+
+    this.onDocente.emit(mioNuovoDocente);
+
+    console.log(mioNuovoDocente);
+    
+  }
 }

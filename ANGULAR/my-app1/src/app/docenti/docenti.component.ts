@@ -19,4 +19,8 @@ export class DocentiComponent {
   caricaDoc(event){
     this.listaDocenti.push(event);
   }
+
+  onCreaDocente(docente: Docente){
+    this.listaDocenti.push(docente);
+  }
 }

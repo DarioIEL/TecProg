@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Studente } from '../models/studente.model';
 
 
@@ -8,7 +8,7 @@ import { Studente } from '../models/studente.model';
   templateUrl: './studenti.component.html',
   styleUrls: ['./studenti.component.css']
 })
-export class StudentiComponent {
+export class StudentiComponent{
 
   // listaStudenti: string[] = [
   //   "Andrea",
