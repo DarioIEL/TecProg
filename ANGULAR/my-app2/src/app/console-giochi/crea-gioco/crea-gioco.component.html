@@ -1,1 +1,33 @@
-<p>crea-gioco works!</p>
+<div class="row">    
+    <div class="mb-3">
+      <label for="" class="form-label">Nome Gioco</label>
+      <input type="text"
+        class="form-control" name="nomeGioco" [(ngModel)]="nomeGioco">
+    </div>
+
+    <div class="mb-3">
+        <label for="" class="form-label">Immagine Gioco</label>
+        <input type="text"
+          class="form-control" name="imgGioco" [(ngModel)]="imgGioco">
+    </div>
+
+    <div class="mb-3">
+        <label for="" class="form-label">Tipo</label>
+        <select class="form-select form-select-lg" name="tipo" [(ngModel)]="tipoGioco">
+            <option selected disabled>Seleziona Tipo</option>
+            <option value="console">Console</option>
+            <option value="tavolo">Tavolo</option>
+            <option value="azzardo">Azzardo</option>
+        </select>
+    </div>
+
+    <div class="mb-3">
+        <button class="btn btn-primary" (click)="onCreaGioco()">Crea gioco</button>
+    </div>
+
+
+    <p>
+        Nome:{{nomeGioco}} - Tipo: {{tipoGioco}} - Immagine: {{imgGioco}}
+    </p>
+
+</div>

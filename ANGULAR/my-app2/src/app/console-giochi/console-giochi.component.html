@@ -1,2 +1,15 @@
-<h1>{{titolo}}</h1>
+<div class="container">
+    <h1>{{titolo}}</h1>
+    <app-crea-gioco (nuovoGioco)="onCreaGioco($event)"></app-crea-gioco>
+
+    <hr>
+
+    <div class="row">
+
+        <div class="col-3" *ngFor="let gioco of listaGioco">
+            <app-gioco [gioco] = "gioco" ></app-gioco>
+        </div>
+        
+    </div>
+</div>
 

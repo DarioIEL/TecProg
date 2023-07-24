@@ -8,6 +8,7 @@ import { ConsoleGiochiComponent } from './console-giochi/console-giochi.componen
 import { NavbarComponent } from './navbar/navbar.component';
 import { GiocoComponent } from './console-giochi/gioco/gioco.component';
 import { CreaGiocoComponent } from './console-giochi/crea-gioco/crea-gioco.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { CreaGiocoComponent } from './console-giochi/crea-gioco/crea-gioco.compo
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
